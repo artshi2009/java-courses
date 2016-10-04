@@ -12,12 +12,13 @@ public class InteractRunner
 				String exit = "no";
 				while (!exit.equals("yes")) 
 				{
-					System.out.print("Vvedite chislo 1: ");
-					String a = vv.next();
-					System.out.print("Vvedite chislo 2: ");
-					String b = vv.next();
-					calc.add(Integer.valueOf(a), Integer.valueOf(b));
-					System.out.println("Result: " + calc.getResult());
+					System.out.print("Vvedite 1-e chislo: ");
+					double a = vv.nextDouble();
+					System.out.print("Vvedite deistvie: ");
+					String operator = vv.next();
+					System.out.print("Vvedite 2-e chislo: ");
+					double b = vv.nextDouble();
+					System.out.println("Result: " + calc.methodCalc(a, operator, b));
 					calc.clearResult();
 					System.out.print("Exit(yes/no): ");
 					exit = vv.next();
